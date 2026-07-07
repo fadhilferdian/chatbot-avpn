@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faidah Arabic Bot</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">✨</span>
+          <h2>Faidah Bot</h2>
+        </div>
+        <button id="new-chat-btn" class="btn btn-new-chat" title="Mulai Percakapan Baru">
+          <span class="btn-icon">+</span> Percakapan Baru
+        </button>
+      </div>
+      <div class="sessions-list" id="sessions-list">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="sidebar-footer">
+        <p>Faidah Arabic Course</p>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <button id="toggle-sidebar-btn" class="toggle-sidebar-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="header-info">
+          <h3 id="active-chat-title">Faidah Arabic Bot</h3>
+          <div class="status-container">
+            <span class="status-dot"></span>
+            <span class="status-text">Online</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="chat-body" id="chat-box">
+        <!-- Messages rendered dynamically -->
+      </div>
+
+      <footer class="chat-footer">
+        <form id="chat-form" class="chat-form">
+          <input type="text" id="user-input" placeholder="Tulis pesan ke Faidah Arabic Bot..." autocomplete="off" required />
+          <button type="submit" id="send-btn" class="send-btn" aria-label="Kirim Pesan">
+            <span class="send-icon">➤</span>
+          </button>
+        </form>
+        <div class="disclaimer">
+          Info akurat & detail pendaftaran langsung hubungi Admin WhatsApp.
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

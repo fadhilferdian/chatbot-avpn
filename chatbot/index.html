@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faidah Arabic Course | Kursus Bahasa Arab Terpercaya</title>
+    
+    <!-- Google Fonts: Inter (Modern Sans) & Amiri (Arabic touch) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'faidah-blue': '#1e3a8a', /* Biru Tua */
+                        'faidah-blue-dark': '#172554', 
+                        'faidah-orange': '#f97316', /* Oranye */
+                        'faidah-orange-hover': '#ea580c',
+                        'faidah-silver': '#f1f5f9', /* Silver terang untuk background */
+                        'faidah-silver-dark': '#94a3b8', /* Silver gelap untuk teks/border */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for additional animations and styling -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-arabic {
+            font-family: 'Amiri', serif;
+        }
+        
+        /* Floating animation for hero graphics */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #1e3a8a, #f97316);
+        }
+
+        /* Glassmorphism for Navbar */
+        .glass-nav {
+            background: rgba(30, 58, 138, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-300 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-faidah-orange rounded-xl flex items-center justify-center text-white text-2xl shadow-lg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <a href="#" class="font-bold text-2xl text-white tracking-tight">Faidah <span class="text-faidah-orange">Arabic</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-faidah-silver hover:text-faidah-orange transition duration-300 font-medium">Beranda</a>
+                    <a href="#tentang" class="text-faidah-silver hover:text-faidah-orange transition duration-300 font-medium">Tentang</a>
+                    <a href="#program" class="text-faidah-silver hover:text-faidah-orange transition duration-300 font-medium">Program</a>
+                    <a href="#testimoni" class="text-faidah-silver hover:text-faidah-orange transition duration-300 font-medium">Testimoni</a>
+                    <a href="#daftar" class="bg-faidah-orange hover:bg-faidah-orange-hover text-white px-6 py-2.5 rounded-full font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white hover:text-faidah-orange focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-faidah-blue border-t border-white/10">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 text-base font-medium text-white hover:text-faidah-orange">Beranda</a>
+                <a href="#tentang" class="block px-3 py-2 text-base font-medium text-white hover:text-faidah-orange">Tentang</a>
+                <a href="#program" class="block px-3 py-2 text-base font-medium text-white hover:text-faidah-orange">Program</a>
+                <a href="#testimoni" class="block px-3 py-2 text-base font-medium text-white hover:text-faidah-orange">Testimoni</a>
+                <a href="#daftar" class="block w-full text-center mt-4 bg-faidah-orange hover:bg-faidah-orange-hover text-white px-5 py-3 rounded-xl font-bold transition duration-300">
+                    Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-faidah-silver">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-faidah-blue opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-faidah-orange opacity-10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Text -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-faidah-blue font-semibold text-sm mb-6">
+                        <i class="fa-solid fa-star text-faidah-orange"></i> Kelas Baru Segera Dimulai
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
+                        Kuasai Bahasa Arab dengan <span class="text-faidah-orange">Mudah & Ramah</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                        Faidah Arabic Course hadir dengan pendekatan bersahabat dan profesional. Mulai dari nol hingga mahir, kami mendampingi setiap langkah Anda.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#daftar" class="bg-faidah-blue hover:bg-faidah-blue-dark text-white text-center px-8 py-4 rounded-xl font-bold text-lg transition duration-300 shadow-xl hover:shadow-faidah-blue/30 flex items-center justify-center gap-2">
+                            Mulai Belajar <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#program" class="bg-white hover:bg-gray-50 border-2 border-faidah-silver-dark text-faidah-blue text-center px-8 py-4 rounded-xl font-bold text-lg transition duration-300 flex items-center justify-center gap-2">
+                            Lihat Kurikulum
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="relative z-10 bg-white p-4 rounded-3xl shadow-2xl animate-float border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Belajar Bahasa Arab" class="rounded-2xl w-full object-cover h-[400px]">
+                        
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute -left-6 top-10 bg-white p-4 rounded-2xl shadow-xl border border-faidah-silver flex items-center gap-3">
+                            <div class="w-12 h-12 bg-faidah-orange/20 rounded-full flex items-center justify-center text-faidah-orange text-xl">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Siswa Aktif</p>
+                                <p class="font-bold text-slate-800">500+</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute -right-6 bottom-10 bg-white p-4 rounded-2xl shadow-xl border border-faidah-silver flex items-center gap-3">
+                            <div class="w-12 h-12 bg-faidah-blue/20 rounded-full flex items-center justify-center text-faidah-blue text-xl">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Tutor</p>
+                                <p class="font-bold text-slate-800">Tersertifikasi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative background blob -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-faidah-orange to-faidah-blue rounded-full opacity-20 blur-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-faidah-orange font-bold tracking-wide uppercase text-sm mb-2">Mengapa Memilih Kami?</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Belajar Bahasa Arab Tidak Pernah Semudah Ini</h3>
+                <p class="text-lg text-slate-600">Faidah Arabic Course menggabungkan metode klasik yang terbukti dengan pendekatan modern yang *friendly* dan interaktif.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Benefit 1 -->
+                <div class="bg-faidah-silver rounded-3xl p-8 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-faidah-blue text-2xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Kurikulum Terstruktur</h4>
+                    <p class="text-slate-600">Materi disusun sistematis dari dasar hingga percakapan lanjutan, memastikan pemahaman yang kokoh.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-faidah-blue text-white rounded-3xl p-8 hover:-translate-y-2 transition duration-300 shadow-xl shadow-faidah-blue/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center shadow-inner mb-6 text-faidah-orange text-2xl">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Tutor Profesional & Ramah</h4>
+                    <p class="text-blue-100">Didampingi oleh pengajar berpengalaman yang sabar dan siap membantu Anda mengatasi kesulitan belajar.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-faidah-silver rounded-3xl p-8 hover:-translate-y-2 transition duration-300 shadow-sm hover:shadow-xl border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-faidah-blue text-2xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Waktu Fleksibel</h4>
+                    <p class="text-slate-600">Pilih jadwal kelas yang sesuai dengan kesibukan Anda. Tersedia kelas akhir pekan dan malam hari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-20 bg-slate-50 border-y border-faidah-silver-dark/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Program Pilihan Kami</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Tingkatan kelas disesuaikan dengan kemampuan Anda. Evaluasi di setiap tahap.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-32 bg-faidah-silver flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-faidah-blue/5 group-hover:bg-faidah-blue/10 transition duration-300"></div>
+                        <h3 class="font-arabic text-5xl text-faidah-blue/20 absolute">مبتدئ</h3>
+                        <span class="relative z-10 bg-white px-4 py-1 rounded-full text-faidah-blue font-bold text-sm shadow-sm">Level 1</span>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-2">Kelas Pemula</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Fokus pada pengenalan huruf, kosa kata dasar, dan kaidah Nahwu Shorof paling mendasar.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Pengenalan Abjad Arab
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Kosakata Harian (Mufrodat)
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Tata Bahasa Dasar
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block w-full py-3 px-4 bg-faidah-silver hover:bg-faidah-blue hover:text-white text-faidah-blue text-center font-semibold rounded-xl transition duration-300">Pilih Kelas</a>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-faidah-orange transform md:-translate-y-4 group relative" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 bg-faidah-orange text-white px-4 py-1 rounded-bl-xl font-semibold text-xs z-20">Terpopuler</div>
+                    <div class="h-32 bg-faidah-blue flex items-center justify-center relative overflow-hidden">
+                        <h3 class="font-arabic text-5xl text-white/10 absolute">متوسط</h3>
+                        <span class="relative z-10 bg-faidah-orange px-4 py-1 rounded-full text-white font-bold text-sm shadow-sm">Level 2</span>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-2">Kelas Menengah</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Praktik percakapan aktif dan pendalaman struktur kalimat untuk komunikasi lancar.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Percakapan Interaktif (Muhadatsah)
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Kaidah Nahwu Shorof Menengah
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Membaca Teks Tanpa Harakat
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block w-full py-3 px-4 bg-faidah-orange hover:bg-faidah-orange-hover text-white text-center font-semibold rounded-xl transition duration-300 shadow-md">Pilih Kelas</a>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-32 bg-faidah-silver flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-faidah-blue/5 group-hover:bg-faidah-blue/10 transition duration-300"></div>
+                        <h3 class="font-arabic text-5xl text-faidah-blue/20 absolute">متقدم</h3>
+                        <span class="relative z-10 bg-white px-4 py-1 rounded-full text-faidah-blue font-bold text-sm shadow-sm">Level 3</span>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-2">Kelas Lanjutan</h4>
+                        <p class="text-slate-600 mb-6 text-sm">Didesain bagi yang ingin mahir menerjemahkan, debat, dan mengkaji literatur Arab.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Analisis Teks & Literatur (Kitab)
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Presentasi & Debat Bahasa Arab
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fa-solid fa-check text-faidah-orange mt-1"></i> Ilmu Balaghah (Sastra Arab)
+                            </li>
+                        </ul>
+                        <a href="#daftar" class="block w-full py-3 px-4 bg-faidah-silver hover:bg-faidah-blue hover:text-white text-faidah-blue text-center font-semibold rounded-xl transition duration-300">Pilih Kelas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-faidah-orange font-bold tracking-wide uppercase text-sm mb-2">Kata Mereka</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Pengalaman Siswa Kami</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testi 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-left text-4xl text-faidah-silver-dark/30 absolute top-6 left-6"></i>
+                    <p class="text-slate-600 mb-6 relative z-10 pt-4 italic">"Awalnya saya takut belajar bahasa Arab karena terlihat susah. Di Faidah Course, metode belajarnya asyik, tutornya sabar banget. Sekarang saya sudah bisa baca teks dasar!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-faidah-blue rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Rizky Ahmad</h4>
+                            <p class="text-sm text-faidah-orange">Siswa Level 1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-left text-4xl text-faidah-silver-dark/30 absolute top-6 left-6"></i>
+                    <p class="text-slate-600 mb-6 relative z-10 pt-4 italic">"Materi tertata rapi. Yang paling saya suka adalah sesi muhadatsah (percakapan). Lingkungannya sangat suportif untuk kita berani bicara walau masih salah-salah."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-faidah-orange rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Aisyah Putri</h4>
+                            <p class="text-sm text-faidah-blue">Siswi Level 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-quote-left text-4xl text-faidah-silver-dark/30 absolute top-6 left-6"></i>
+                    <p class="text-slate-600 mb-6 relative z-10 pt-4 italic">"Lokasinya strategis di Tanjung Morawa. Fasilitas memadai dan harganya sangat terjangkau dibandingkan value yang diberikan. Sangat direkomendasikan!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-white font-bold">F</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Fadlan Siregar</h4>
+                            <p class="text-sm text-faidah-orange">Siswa Level 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-faidah-blue"></div>
+        <!-- Decorative geometric patterns -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#f97316 2px, transparent 2px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Siap Memulai Perjalanan Bahasa Arab Anda?</h2>
+            <p class="text-lg md:text-xl text-blue-200 mb-10 max-w-2xl mx-auto">
+                Bergabunglah bersama ratusan siswa lainnya di Faidah Arabic Course. Kuota kelas terbatas untuk menjaga kualitas pembelajaran.
+            </p>
+            
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl max-w-2xl mx-auto text-left">
+                <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center">Formulir Pendaftaran Cepat</h3>
+                <form onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Nama Lengkap</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-faidah-silver border border-transparent focus:bg-white focus:border-faidah-orange focus:ring-2 focus:ring-faidah-orange/20 outline-none transition duration-200" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Nomor WhatsApp</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-faidah-silver border border-transparent focus:bg-white focus:border-faidah-orange focus:ring-2 focus:ring-faidah-orange/20 outline-none transition duration-200" placeholder="08xx xxxx xxxx">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Program Pilihan</label>
+                            <select required class="w-full px-4 py-3 rounded-xl bg-faidah-silver border border-transparent focus:bg-white focus:border-faidah-orange focus:ring-2 focus:ring-faidah-orange/20 outline-none transition duration-200 text-slate-700">
+                                <option value="" disabled selected>Pilih Level</option>
+                                <option value="1">Level 1 (Pemula)</option>
+                                <option value="2">Level 2 (Menengah)</option>
+                                <option value="3">Level 3 (Lanjutan)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-faidah-orange hover:bg-faidah-orange-hover text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 mt-4 flex items-center justify-center gap-2">
+                        Kirim Pendaftaran <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="hidden mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl text-center">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Pendaftaran berhasil dikirim! Tim kami akan segera menghubungi Anda melalui WhatsApp.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 pt-16 pb-8 border-t-4 border-faidah-orange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-faidah-orange rounded-xl flex items-center justify-center text-white text-xl shadow-lg">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span class="font-bold text-2xl text-white tracking-tight">Faidah <span class="text-faidah-orange">Arabic</span></span>
+                    </div>
+                    <p class="text-faidah-silver-dark mb-6 text-sm leading-relaxed">
+                        Lembaga kursus bahasa Arab profesional dengan metode belajar yang ramah, mudah dipahami, dan menyenangkan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-faidah-silver hover:bg-faidah-orange hover:text-white transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-faidah-silver hover:bg-faidah-blue hover:text-white transition duration-300"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-faidah-silver hover:bg-[#25D366] hover:text-white transition duration-300"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-faidah-silver-dark hover:text-faidah-orange transition duration-300 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
+                        <li><a href="#tentang" class="text-faidah-silver-dark hover:text-faidah-orange transition duration-300 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
+                        <li><a href="#program" class="text-faidah-silver-dark hover:text-faidah-orange transition duration-300 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Program & Level</a></li>
+                        <li><a href="#testimoni" class="text-faidah-silver-dark hover:text-faidah-orange transition duration-300 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Testimoni</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-white font-bold text-lg mb-6">Informasi Kontak & Lokasi</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-10 h-10 min-w-[40px] rounded-full bg-slate-800 flex items-center justify-center text-faidah-orange">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="text-faidah-silver-dark text-sm leading-relaxed">
+                                Jl. Madirsan,<br>
+                                Tanjung Morawa, Kab. Deli Serdang,<br>
+                                Sumatera Utara, Indonesia
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full bg-slate-800 flex items-center justify-center text-faidah-blue">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-faidah-silver-dark text-sm">+62 812-XXXX-XXXX</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 min-w-[40px] rounded-full bg-slate-800 flex items-center justify-center text-faidah-silver">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="text-faidah-silver-dark text-sm">halo@faidaharabic.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-faidah-silver-dark text-sm">
+                    &copy; 2026 Faidah Arabic Course. All rights reserved.
+                </p>
+                <div class="text-faidah-silver-dark text-sm">
+                    Didesain dengan <i class="fa-solid fa-heart text-faidah-orange"></i> untuk pendidikan.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+            offset: 100, // offset (in px) from the original trigger point
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease-out-cubic', // default easing for AOS animations
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Change Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'glass-nav');
+                nav.classList.remove('py-2');
+            } else {
+                nav.classList.add('py-2');
+                // Keep glass nav for better visibility, or make it transparent
+            }
+        });
+
+        // Form Submission Mock Function
+        function showSuccessMessage() {
+            const msg = document.getElementById('success-message');
+            msg.classList.remove('hidden');
+            // Hide after 5 seconds
+            setTimeout(() => {
+                msg.classList.add('hidden');
+                document.querySelector('form').reset();
+            }, 5000);
+        }
+    </script>
+
+    <!-- Floating Chatbot Widget -->
+    <div class="fixed bottom-6 right-6 z-50 font-sans">
+        <!-- Floating Chat Button -->
+        <button id="widget-trigger" class="flex items-center justify-center w-14 h-14 bg-faidah-orange hover:bg-faidah-orange-hover text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none relative">
+            <i id="widget-trigger-icon" class="fa-solid fa-comments text-2xl"></i>
+            <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="widget-container" class="absolute bottom-16 right-0 w-80 sm:w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col hidden transition-all duration-300 origin-bottom-right transform scale-95 opacity-0">
+            <!-- Custom Modal: Clear Confirmation -->
+            <div id="widget-confirm-clear-modal" class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px] rounded-2xl z-50 flex flex-col items-center justify-center p-6 text-center hidden opacity-0 transition-all duration-300">
+                <div class="bg-white rounded-xl p-5 shadow-xl max-w-[280px] sm:max-w-[320px] transform scale-95 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-full flex items-center justify-center text-lg mx-auto mb-3">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-800 text-sm mb-1.5 font-sans">Hapus Riwayat Chat?</h5>
+                    <p class="text-[11px] text-gray-500 mb-4 leading-relaxed font-sans">
+                        Semua pesan akan dihapus dari layar ini. Anda tetap dapat memulihkannya nanti.
+                    </p>
+                    <div class="flex gap-2 w-full">
+                        <button id="modal-clear-cancel" type="button" class="flex-1 py-2 text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition font-sans">Batal</button>
+                        <button id="modal-clear-confirm" type="button" class="flex-1 py-2 text-xs font-semibold bg-red-500 hover:bg-red-600 text-white rounded-lg transition font-sans">Ya, Hapus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Modal: Restore Confirmation -->
+            <div id="widget-confirm-restore-modal" class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px] rounded-2xl z-50 flex flex-col items-center justify-center p-6 text-center hidden opacity-0 transition-all duration-300">
+                <div class="bg-white rounded-xl p-5 shadow-xl max-w-[280px] sm:max-w-[320px] transform scale-95 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-faidah-blue rounded-full flex items-center justify-center text-lg mx-auto mb-3">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <h5 class="font-bold text-gray-800 text-sm mb-1.5 font-sans">Pulihkan Chat?</h5>
+                    <p class="text-[11px] text-gray-500 mb-4 leading-relaxed font-sans">
+                        Apakah Anda ingin mengembalikan semua riwayat percakapan sebelumnya?
+                    </p>
+                    <div class="flex gap-2 w-full">
+                        <button id="modal-restore-cancel" type="button" class="flex-1 py-2 text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition font-sans">Batal</button>
+                        <button id="modal-restore-confirm" type="button" class="flex-1 py-2 text-xs font-semibold bg-faidah-blue hover:bg-faidah-blue-dark text-white rounded-lg transition font-sans">Ya, Pulihkan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-faidah-blue to-faidah-blue-dark text-white rounded-t-2xl">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lg">✨</div>
+                    <div>
+                        <h4 class="font-bold text-sm">Faidah Arabic Bot</h4>
+                        <span class="text-[10px] text-green-300 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Online
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <!-- Reset/Clear History -->
+                    <button id="widget-clear-btn" class="p-1.5 hover:bg-white/10 rounded text-white/95 hover:text-white transition" title="Hapus Riwayat Chat">
+                        <i class="fa-solid fa-trash-can text-sm"></i>
+                    </button>
+                    <!-- Close -->
+                    <button id="widget-close-btn" class="p-1.5 hover:bg-white/10 rounded text-white/95 hover:text-white transition" title="Tutup Chat">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Restore Banner -->
+            <div id="widget-restore-banner" class="hidden bg-orange-50 border-b border-orange-100 px-4 py-2 flex items-center justify-between text-[11px] text-orange-800 animate-widgetFadeIn">
+                <span>Riwayat chat telah diarsip.</span>
+                <button id="widget-restore-btn" class="font-bold underline hover:text-orange-950 flex items-center gap-1">
+                    <i class="fa-solid fa-rotate-left"></i> Pulihkan
+                </button>
+            </div>
+
+            <!-- Message Area -->
+            <div id="widget-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50/50">
+                <!-- Dynamic messages -->
+            </div>
+
+            <!-- Footer & Input -->
+            <div class="p-3 bg-white border-t border-gray-100 rounded-b-2xl">
+                <form id="widget-form" class="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-3 py-1.5 focus-within:border-faidah-blue focus-within:bg-white focus-within:ring-2 focus-within:ring-faidah-blue/15 transition-all">
+                    <input type="text" id="widget-input" placeholder="Tanya Faidah Arabic Bot..." class="flex-1 bg-transparent border-none outline-none text-xs sm:text-sm text-gray-800 placeholder-gray-400 py-1" required autocomplete="off" />
+                    <button type="submit" id="widget-send" class="w-8 h-8 bg-faidah-blue hover:bg-faidah-blue-dark text-white rounded-full flex items-center justify-center transition-all transform active:scale-95">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+                <div class="text-[9px] text-center text-gray-400 mt-1.5">
+                    Didukung oleh Gemini & Faidah Arabic Course
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Extra Styles for Chatbot Elements -->
+    <style>
+        #widget-messages::-webkit-scrollbar {
+            width: 4px;
+        }
+        #widget-messages::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+        .widget-bubble-user a {
+            color: #ffffff !important;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .widget-bubble-user a:hover {
+            color: #ffedd5 !important;
+        }
+        .widget-bubble-bot a {
+            color: #2563eb !important;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .widget-bubble-bot a:hover {
+            color: #1d4ed8 !important;
+        }
+        @keyframes widgetFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-widgetFadeIn {
+            animation: widgetFadeIn 0.3s ease-out forwards;
+        }
+    </style>
+
+    <!-- Chatbot Widget Logic -->
+    <script>
+        (function() {
+            const API_URL = 'http://localhost:3000';
+            const SESSIONS_KEY = 'faidah_widget_chat_history';
+            const BACKUP_KEY = 'faidah_widget_chat_backup';
+
+            // DOM Elements
+            const trigger = document.getElementById('widget-trigger');
+            const triggerIcon = document.getElementById('widget-trigger-icon');
+            const container = document.getElementById('widget-container');
+            const closeBtn = document.getElementById('widget-close-btn');
+            const clearBtn = document.getElementById('widget-clear-btn');
+            const restoreBanner = document.getElementById('widget-restore-banner');
+            const restoreBtn = document.getElementById('widget-restore-btn');
+            const messagesArea = document.getElementById('widget-messages');
+            const form = document.getElementById('widget-form');
+            const input = document.getElementById('widget-input');
+            const sendBtn = document.getElementById('widget-send');
+
+            // Custom Modals Elements
+            const clearModal = document.getElementById('widget-confirm-clear-modal');
+            const clearCancelBtn = document.getElementById('modal-clear-cancel');
+            const clearConfirmBtn = document.getElementById('modal-clear-confirm');
+            
+            const restoreModal = document.getElementById('widget-confirm-restore-modal');
+            const restoreCancelBtn = document.getElementById('modal-restore-cancel');
+            const restoreConfirmBtn = document.getElementById('modal-restore-confirm');
+
+            let chatHistory = [];
+            let isGenerating = false;
+            let isOpen = false;
+
+            // Modal helpers
+            function showModal(modalEl) {
+                modalEl.classList.remove('hidden');
+                setTimeout(() => {
+                    modalEl.classList.remove('opacity-0');
+                    modalEl.classList.add('opacity-100');
+                    const inner = modalEl.querySelector('div');
+                    if (inner) {
+                        inner.classList.remove('scale-95');
+                        inner.classList.add('scale-100');
+                    }
+                }, 10);
+            }
+
+            function hideModal(modalEl) {
+                modalEl.classList.remove('opacity-100');
+                modalEl.classList.add('opacity-0');
+                const inner = modalEl.querySelector('div');
+                if (inner) {
+                    inner.classList.remove('scale-100');
+                    inner.classList.add('scale-95');
+                }
+                setTimeout(() => {
+                    modalEl.classList.add('hidden');
+                }, 300);
+            }
+
+            // Initialize Widget
+            function init() {
+                loadHistory();
+                renderChat();
+                checkRestoreStatus();
+
+                // Trigger click - Toggle window
+                trigger.addEventListener('click', () => toggleWidget());
+
+                // Close button
+                closeBtn.addEventListener('click', () => {
+                    toggleWidget(false);
+                });
+
+                // Clear button opens modal
+                clearBtn.addEventListener('click', () => {
+                    if (chatHistory.length > 0) {
+                        showModal(clearModal);
+                    }
+                });
+
+                // Clear Cancel
+                clearCancelBtn.addEventListener('click', () => {
+                    hideModal(clearModal);
+                });
+
+                // Clear Confirm
+                clearConfirmBtn.addEventListener('click', () => {
+                    hideModal(clearModal);
+                    executeClear();
+                });
+
+                // Restore Banner Click opens modal
+                restoreBtn.addEventListener('click', () => {
+                    showModal(restoreModal);
+                });
+
+                // Restore Cancel
+                restoreCancelBtn.addEventListener('click', () => {
+                    hideModal(restoreModal);
+                });
+
+                // Restore Confirm
+                restoreConfirmBtn.addEventListener('click', () => {
+                    hideModal(restoreModal);
+                    executeRestore();
+                });
+
+                // Submit form
+                form.addEventListener('submit', handleSubmit);
+            }
+
+            // Load Chat History
+            function loadHistory() {
+                try {
+                    const stored = localStorage.getItem(SESSIONS_KEY);
+                    chatHistory = stored ? JSON.parse(stored) : [];
+                } catch (e) {
+                    console.error('Error loading widget history:', e);
+                    chatHistory = [];
+                }
+            }
+
+            // Save Chat History
+            function saveHistory() {
+                try {
+                    localStorage.setItem(SESSIONS_KEY, JSON.stringify(chatHistory));
+                } catch (e) {
+                    console.error('Error saving widget history:', e);
+                }
+            }
+
+            // Toggle Widget Display
+            function toggleWidget(forceState) {
+                const nextState = typeof forceState === 'boolean' ? forceState : !isOpen;
+                if (nextState === isOpen) return;
+                
+                isOpen = nextState;
+
+                if (isOpen) {
+                    container.classList.remove('hidden');
+                    // Small delay to trigger animation
+                    setTimeout(() => {
+                        container.classList.remove('opacity-0', 'scale-95', 'translate-y-4');
+                        container.classList.add('opacity-100', 'scale-100', 'translate-y-0');
+                    }, 10);
+                    triggerIcon.className = 'fa-solid fa-chevron-down text-2xl';
+                    scrollToBottom();
+                    input.focus();
+                } else {
+                    container.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
+                    container.classList.add('opacity-0', 'scale-95', 'translate-y-4');
+                    triggerIcon.className = 'fa-solid fa-comments text-2xl';
+                    setTimeout(() => {
+                        container.classList.add('hidden');
+                    }, 300);
+                }
+            }
+
+            // Clear history and save backup
+            function executeClear() {
+                localStorage.setItem(BACKUP_KEY, JSON.stringify(chatHistory));
+                chatHistory = [];
+                saveHistory();
+                
+                renderChat();
+                checkRestoreStatus();
+            }
+
+            // Restore history from backup
+            function executeRestore() {
+                const backup = localStorage.getItem(BACKUP_KEY);
+                if (!backup) return;
+
+                chatHistory = JSON.parse(backup);
+                saveHistory();
+                localStorage.removeItem(BACKUP_KEY);
+
+                renderChat();
+                checkRestoreStatus();
+            }
+
+            // Check if backup exists to show/hide restore banner
+            function checkRestoreStatus() {
+                const backup = localStorage.getItem(BACKUP_KEY);
+                if (backup && chatHistory.length === 0) {
+                    restoreBanner.classList.remove('hidden');
+                } else {
+                    restoreBanner.classList.add('hidden');
+                }
+            }
+
+            // Format message markdown & links
+            function formatMessage(text) {
+                if (!text) return '';
+
+                // Escape HTML
+                let formatted = text
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+
+                // Markdown Link [Label](URL)
+                formatted = formatted.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
+                // Markdown Link [URL]
+                formatted = formatted.replace(/\[(https?:\/\/[^\s\]]+)\]/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
+                // Bold **text**
+                formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+                // Italic *text*
+                formatted = formatted.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
+                // Raw URLs
+                const urlRegex = /(?<!href=")(https?:\/\/[^\s<]+)/g;
+                formatted = formatted.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
+                // Auto-detect phone numbers
+                const phoneRegex = /(?<![/\w])(08\d{8,11}|\+?628\d{8,11})(?!\w)/g;
+                formatted = formatted.replace(phoneRegex, (match) => {
+                    let clean = match.replace(/\+/g, '');
+                    if (clean.startsWith('0')) {
+                        clean = '62' + clean.substring(1);
+                    }
+                    return `<a href="https://wa.me/${clean}" target="_blank" rel="noopener noreferrer">${match}</a>`;
+                });
+
+                return formatted;
+            }
+
+            // Render all chat history messages
+            function renderChat() {
+                messagesArea.innerHTML = '';
+
+                if (chatHistory.length === 0) {
+                    // Welcome Message
+                    const welcome = document.createElement('div');
+                    welcome.className = 'text-center py-10 px-4 animate-widgetFadeIn';
+                    welcome.innerHTML = `
+                        <div class="text-4xl mb-3 animate-bounce">✨</div>
+                        <h5 class="font-bold text-gray-800 text-sm mb-1">Ahlan wa Sahlan!</h5>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            Saya adalah <strong>Faidah Arabic Bot</strong>. Silakan tanyakan apa saja seputar program kursus bahasa Arab di Faidah Arabic Course! 🚀
+                        </p>
+                    `;
+                    messagesArea.appendChild(welcome);
+                    return;
+                }
+
+                chatHistory.forEach(msg => {
+                    appendMessageDOM(msg.role, msg.text);
+                });
+                scrollToBottom();
+            }
+
+            // Append single message to DOM
+            function appendMessageDOM(role, text) {
+                const isUser = role === 'user';
+                const containerDiv = document.createElement('div');
+                containerDiv.className = `flex gap-2.5 max-w-[85%] ${isUser ? 'ml-auto flex-row-reverse' : 'mr-auto'} mb-3 animate-widgetFadeIn`;
+
+                const avatarDiv = document.createElement('div');
+                avatarDiv.className = `w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0 shadow-sm ${
+                    isUser ? 'bg-orange-100 text-faidah-orange' : 'bg-gradient-to-br from-indigo-400 to-faidah-blue text-white'
+                }`;
+                avatarDiv.textContent = isUser ? 'U' : '✨';
+
+                const bubbleDiv = document.createElement('div');
+                bubbleDiv.className = `px-3.5 py-2.5 rounded-2xl text-[11px] sm:text-xs leading-relaxed shadow-sm whitespace-pre-wrap ${
+                    isUser 
+                        ? 'bg-faidah-orange text-white rounded-tr-none text-left widget-bubble-user' 
+                        : 'bg-white text-gray-800 border border-gray-100 rounded-tl-none text-left widget-bubble-bot'
+                }`;
+                bubbleDiv.innerHTML = formatMessage(text);
+
+                containerDiv.appendChild(avatarDiv);
+                containerDiv.appendChild(bubbleDiv);
+                messagesArea.appendChild(containerDiv);
+            }
+
+            // Add Typing Indicator
+            function setTyping(show) {
+                const existing = document.getElementById('widget-typing');
+                if (show) {
+                    if (existing) return;
+                    const containerDiv = document.createElement('div');
+                    containerDiv.id = 'widget-typing';
+                    containerDiv.className = 'flex gap-2.5 max-w-[85%] mr-auto items-center animate-widgetFadeIn mb-3';
+                    containerDiv.innerHTML = `
+                        <div class="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-400 to-faidah-blue text-white flex items-center justify-center text-[10px] font-bold shadow-sm">✨</div>
+                        <div class="px-3.5 py-3 rounded-2xl bg-white border border-gray-100 rounded-tl-none flex items-center gap-1.5 shadow-sm">
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: -0.32s"></span>
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: -0.16s"></span>
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: -0.08s"></span>
+                        </div>
+                    `;
+                    messagesArea.appendChild(containerDiv);
+                    scrollToBottom();
+                } else {
+                    if (existing) existing.remove();
+                }
+            }
+
+            // Disable/Enable Input
+            function setDisabled(disable) {
+                input.disabled = disable;
+                sendBtn.disabled = disable;
+                if (disable) {
+                    sendBtn.classList.add('opacity-50');
+                } else {
+                    sendBtn.classList.remove('opacity-50');
+                }
+            }
+
+            // Scroll chat to bottom
+            function scrollToBottom() {
+                messagesArea.scrollTop = messagesArea.scrollHeight;
+            }
+
+            // Submit handler
+            async function handleSubmit(e) {
+                e.preventDefault();
+                if (isGenerating) return;
+
+                const query = input.value.trim();
+                if (!query) return;
+
+                input.value = '';
+                isGenerating = true;
+                setDisabled(true);
+
+                // Clear welcome text if it's the first message
+                if (chatHistory.length === 0) {
+                    messagesArea.innerHTML = '';
+                }
+
+                // Add user message
+                chatHistory.push({ role: 'user', text: query });
+                saveHistory();
+                appendMessageDOM('user', query);
+                scrollToBottom();
+
+                // Show typing
+                setTyping(true);
+
+                try {
+                    const response = await fetch(`${API_URL}/api/chat`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ conversation: chatHistory })
+                    });
+
+                    if (!response.ok) throw new Error('API failed');
+
+                    const data = await response.json();
+                    setTyping(false);
+
+                    const reply = data.output || 'Maaf, terjadi kesalahan saat memproses respons Anda.';
+                    chatHistory.push({ role: 'model', text: reply });
+                    saveHistory();
+
+                    appendMessageDOM('model', reply);
+                    scrollToBottom();
+                } catch (err) {
+                    console.error(err);
+                    setTyping(false);
+                    const errMsg = 'Afwan, koneksi terputus atau terjadi gangguan internal. Silakan coba lagi 🙏';
+                    chatHistory.push({ role: 'model', text: errMsg });
+                    saveHistory();
+
+                    appendMessageDOM('model', errMsg);
+                    scrollToBottom();
+                } finally {
+                    isGenerating = false;
+                    setDisabled(false);
+                    input.focus();
+                }
+            }
+
+            // Initialize when DOM loads
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>
